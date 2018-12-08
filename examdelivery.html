@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>DOIT | EXAM DELIVERY</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" src="image/jpg" href="images/logo-05.jpg">
+  <style>
+  body {
+      font: 400 15px Lato,Verdana,Arial;
+      line-height: 1.8;
+      background-color:#FFFFFF;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom:30px      ;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  } 
+
+  
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  
+  
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+   
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  p{text-align:left;}
+  .smalltag
+{
+float:left;
+width:100%;
+height:30px;
+background-color:#F4D03F;
+text-align:right;
+font-size:12px;
+line-height:35px;
+color:#FFFFFF;
+font-family:Verdana;
+margin-left:auto;
+margin-right:auto;
+
+}
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #F4D03F; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #FFFFFF;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #F4D03F !important;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  
+  .navbar {
+      margin-bottom: 0;
+      background-color:#FFFFFF;
+      z-index: 9999;
+      border: 0;
+      font-size: 17px !important;
+      line-height: 1.42857143 !important;
+      border-radius: 0;
+      font-family:Verdana,Arial;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: black !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #F4D03F!important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #F4D03F;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  .bg-white{
+  background-color:#FFFFFF;
+	padding:20px 20px;
+  }
+   </style>
+  <script>
+$(document).ready(function(){
+$(".navbar a, footer a").on('click', function(event) {
+    if (this.hash !== "") {
+     event.preventDefault();
+     var hash = this.hash;
+     $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+  
+  
+  
+    $(".slideanim").each(function(){
+  $(window).scroll(function() {
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="80">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+       
+	   <div class="smalltag">
+       <p style="text-align:right">CALL US AT:+91-9600142211 | TELEPHONE:+91-4448532884 | sales@doit.co.in</p>
+       </div>
+      
+        <div class="container">
+        
+		<div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+        </button>
+	    <a class="navbar-brand" href="#myPage"></a>
+        </div>
+		
+		<div class="collapse navbar-collapse" id="myNavbar">
+		<ul  class="nav navbar-nav navbar-left">
+		<li><a href="index.html">HOME</a></li>
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href="#about">ABOUT EXAM DELIVERY</a></li>
+		<li><a href="#inhouse">IN HOUSE</a></li>
+		<li><a href="#remote">REMOTE SERVICE</a></li>
+        </ul>
+        </div>
+        
+		</div>
+		
+</nav>
+<br>
+
+<!-- Container (Detail Section) -->
+<div id="about" class="container-fluid bg-grey text-center">
+   <section>
+   <div class="row">
+   <div class="col-sm-8">
+   <h2>about exam delivery:</h2>
+   <p>For an employer or a professional an authosrised learning not only requires intensive training but also needs an authorised and an all supportive test centres to achieve their required certification.</p>
+   <p>DOIT can easily be the best choice for your needs as cost effective,ethical and well equipped for all branded certifications.Our services cover various platforms from reputed organisation such as Pearson Vue, Exin, PeopleCert, etc.,</p>
+   <h2>CERTIFICATION :</h2>
+   <p>* 7 seater exam center one of the largest in Tamilnadu</p>
+   <p>* Exam slots available in every 15 mins </p>
+   <p>* Cost effective with competitive discounts</p>
+   <p>* Proximity to the IT Hub</p>
+   <p>* Secure and yet sophisticated exam centre</p>
+   </div>
+   
+   <div class="col-sm-12">
+   <div id="myCarousel" class="carousel slide" data-ride="carousel" align="center">
+   
+    <div class="carousel-inner">
+	
+	<div class="item active ">
+	<div class="BOX">
+	<img  src="images/pearsonvue.jpg" >
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="BOX">
+	<img  src="images/exin.jpg" height="60%">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="BOX">
+	<img  src="images/peoplecert.jpg" >
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="BOX">
+	<img  src="images/kryterion.jpg" width="60%">
+	</div>
+	</div>
+	
+	</div>
+	</div>
+    </div>
+   
+   </div>
+   </section>
+</div>
+<!-- -->
+<div class="bg-white"></div>
+
+
+<!-- -->
+<div id="inhouse" class="container-fluid bg-grey text-center">
+   <section>
+   <div class="row">
+   <div class="col-sm-8">
+   <h2>in house:</h2>
+   <p>* Centre for Pearson Vue that supports online testing from Cisco, Microsoft, Oracle, IBM, Citrix, VMWare and more </p>
+   <p>* Centre for Exin that supports AgileScrum, Service Management, Project Mangement,Programming,Security and Privacy ect.</p>
+   <p>* Centre for PoepleCert that support ITIL, Prince2 and ect</p>
+   <p>* Center for Pearson VUE  that supports Service Management, Project Managament, Programming, Security and Privacy etc.</p>
+   </div>
+   </div>
+   </section>
+</div>
+<!-- -->	
+<div class="bg-white"></div>
+<!-- -->
+<div id="remote" class="container-fluid bg-grey text-center">
+   <section>
+   <div class="row">
+   <div class="col-sm-8">
+   <h2>Remote services:</h2>
+   <p>* One of the rarest but the worthiest service an employer/employee would prefer it bring a required test centre to their own campus.We have the facility and capability to create a remote/mobile examination centre for certifications.</p>
+   <p>* To add more value, we donot charge employer/employee to set up these mobile/remote centres</p>
+   </div>
+   </div>
+   </section>
+</div>
+<!-- -->
+<div class="bg-white"></div>
+<!-- -->
+</body>
+</html>

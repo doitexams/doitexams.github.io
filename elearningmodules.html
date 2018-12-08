@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>DOIT | E-LEARING MODULES</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="icon" src="image/jpg" href="images/logo-05.jpg">
+  <style>
+  body {
+      font: 400 15px Lato,Verdana,Arial;
+      line-height: 1.8;
+      background-color:#FFFFFF;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom:30px      ;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 30px;
+  } 
+ 
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #f4511e;
+      font-size: 50px;
+  }
+  .logo {
+      color: #f4511e;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #f4511e;
+  }
+  .carousel-indicators li {
+      border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+      background-color: #f4511e;
+  }
+  .smalltag
+{
+float:left;
+width:100%;
+height:30px;
+background-color:#F4D03F;
+text-align:right;
+font-size:12px;
+line-height:35px;
+color:#FFFFFF;
+font-family:Verdana;
+margin-left:auto;
+margin-right:auto;
+
+}
+  .item h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      font-weight: 400;
+      font-style: italic;
+      margin: 70px 0;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #F4D03F; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #F4D03F;
+      background-color: #fff !important;
+      color: #f4511e;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #F4D03F !important;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  
+  .navbar {
+      margin-bottom: 0;
+      background-color:#FFFFFF;
+      z-index: 9999;
+      border: 0;
+      font-size: 15px !important;
+      line-height: 1.42857143 !important;
+      border-radius: 0;
+      font-family:Verdana,Arial;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: black !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #F4D03F!important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 30px;
+      margin-bottom: 20px;
+      color: #F4D03F;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  .box{
+        height: 250px;
+		background:#f6f6f6;
+        color: #fff;
+        position:relative;
+        overflow:hidden;
+    }
+    .box figure {
+        position: absolute;
+        text-align: left;
+        padding: 10px 19px 19px 19px;
+        width: 100%;
+        height: 100%;
+        border-top: 1px solid #fff;
+        background:rgba(0,0,0,0.71);
+        bottom: -80%;
+        transition: ease-in-out .5s;
+    }
+		
+    .box figure h3{
+        margin: 0;
+        padding-bottom: 10px;font-size:15px;
+    }
+    .box img{
+        height: 100%;
+    }
+	
+	#itil,#softskill,#miscellaneous,#prince2
+	{
+	padding-top:150px;
+	 padding-bottom:190px;
+	}
+	#management
+	{
+	padding-top:200px;
+	padding-bottom:250px;
+	}
+
+  </style>
+  <script>
+$(document).ready(function(){
+$(".navbar a, footer a").on('click', function(event) {
+    if (this.hash !== "") {
+     event.preventDefault();
+     var hash = this.hash;
+     $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+
+        window.location.hash = hash;
+      });
+    } 
+  });
+  
+  
+  
+    $(".slideanim").each(function(){
+  $(window).scroll(function() {
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+  </head>
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="80">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+       <div class="smalltag">
+       <p>CALL US AT:+91-9600142211 | TELEPHONE:+91-4448532884 | sales@doit.co.in</p>
+       </div>
+      
+       <div class="container">
+       <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+       </button>
+	    <a class="navbar-brand" href="#myPage"></a>
+        </div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		
+		<ul  class="nav navbar-nav navbar-left">
+		<li><a href="index.html">HOME</a></li>
+		</ul>
+        
+		<ul class="nav navbar-nav navbar-right">
+        <li><a href="#itil">ITES TRAINING COURSES</a></li>
+		<li><a href="#softskill">SOFTSKILL COURSES</a></li>
+        <li><a href="#management">MANAGEMENT COURSES</a></li>
+        <li><a href="#miscellaneous">MISCELLANEOUS COURSES</a></li>
+		<li><a href="#prince2">PRINCE2</a></li>
+        </ul>
+        </div>
+        </div>
+		
+</nav>
+
+
+<div class="container">
+    <div id="itil">
+    <div class="container-fluid bg-grey">
+	<section>
+       <div class="row">
+	    <h2 style="text-align:center;">ITES TRAINING COURSES</h2>
+		<div id="myCarousel" class="carousel slide" data-ride="carousel" style="img-align:right">
+ 
+    
+    <div class="carousel-inner">
+	<div class="item active ">
+	<div class="box">
+	<img  src="images/c1.jpg" class="center-block">
+	</div>
+	</div>
+    
+
+    <div class="item">
+	<div class="box">
+    <img  src="images/c2.jpg" class="center-block">
+	</div>
+	</div>
+    
+    
+    <div class="item">
+	<div class="box">
+    <img  src="images/c3.jpg" class="center-block">
+	</div>
+    </div>
+    
+	<div class="item">
+	<div class="box">
+	<img  src="images/c4.jpg" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c5.jpg" class="center-block">
+	</div>
+    </div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c6.jpg" class="center-block">
+	</div>
+	</div>
+	
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c7.jpg" width="70%" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c8.jpg"class="center-block">
+	</div>
+	</div>
+	
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c9.jpg" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c10.jpg" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c11.jpg" width="50%" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c12.jpg" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c13.jpg" class="center-block">
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c14.jpg" class="center-block" >
+	</div>
+	</div>
+	
+	<div class="item">
+	<div class="box">
+	<img  src="images/c15.jpg" class="center-block">
+	</div>
+    </div>
+    
+	</div>	 
+  </div>
+  </div>
+  
+  <br>
+  
+       <div class="row">
+       <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/i1.jpg">
+	   </div>
+       </div> 
+		
+        
+       <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/i2.jpg">
+	   </div>
+       </div>
+            
+           
+       <div class="col-sm-4 col-xs-12">
+       <div class="thambnail">
+       <img src="images/i3.jpg">
+	   </div>
+       </div>
+       </div>
+    </section>   
+<br>
+    <section>   
+      <div class="row">
+      
+	  <div class="col-sm-4 col-xs-15">
+      <div class="thambnail">
+	  <img src="images/i4.jpg">
+	  </div>
+      </div>
+      
+	  <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/i7.jpg">
+      </div>
+      </div>
+ 
+      <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/i6.jpg">
+      </div>
+      </div>
+	  
+      </div>	  
+	 </section>
+	 
+<br>
+	 <section>
+	 <div class="row">
+	 <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/n2.jpg">
+	   </div>
+       </div>
+	   </div>
+	   </section>
+	   
+   
+	   
+	   
+      </div>
+    </div>
+</div>  
+
+<div class="container">
+    <div id="softskill">
+    <div class="container-fluid bg-grey">
+	<section>
+       <div class="row">
+	    <h2 style="text-align:center;">SOFTSKILL COURSES</h2>
+       <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/s1.jpg">
+	   </div>
+       </div> 
+		
+        
+       <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/s2.jpg">
+	   </div>
+       </div>
+            
+           
+       <div class="col-sm-4 col-xs-12">
+       <div class="thambnail">
+       <img src="images/s3.jpg">
+	   </div>
+       </div>
+       </div>
+    </section>   
+<br>
+    <section>   
+      <div class="row">
+      
+	  <div class="col-sm-4 col-xs-15">
+      <div class="thambnail">
+	  <img src="images/s4.jpg">
+	  </div>
+      </div>
+      
+	  <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/s5.jpg">
+      </div>
+      </div>
+ 
+      <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/s6.jpg">
+      </div>
+      </div>
+	  
+      </div>	  
+	 </section>   
+      </div>
+    </div>
+</div>  
+
+<div class="container">
+    <div id="management">
+	<div class="container-fluid bg-grey">
+    <section>
+       <div class="row">
+	    <h2 style="text-align:center;">MANAGEMENT COURSES</h2>
+       
+	   <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/n1.jpg">
+	   </div>
+       </div>  
+
+	   
+	   
+	   <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/n3.jpg">
+	   </div>
+       </div>
+	   
+	   </div>
+       	</section>
+	</div>
+	</div>
+	</div>
+    
+	<div class="container">
+    <div id="miscellaneous">
+    <div class="container-fluid bg-grey">
+	<section>
+       <div class="row">
+	    <h2 style="text-align:center;">MISCELLANEOUS COURSES</h2>
+       <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/t1.jpg">
+	   </div>
+       </div> 
+		
+        
+       <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/t2.jpg">
+	   </div>
+       </div>
+            
+           
+       <div class="col-sm-4 col-xs-12">
+       <div class="thambnail">
+       <img src="images/t3.jpg">
+	   </div>
+       </div>
+       </div>
+    </section>   
+<br>
+    <section>   
+      <div class="row">
+      
+	  <div class="col-sm-4 col-xs-15">
+      <div class="thambnail">
+	  <img src="images/t4.jpg">
+	  </div>
+      </div>
+      
+	  <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/t5.jpg">
+      </div>
+      </div>
+ 
+      <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/t6.jpg">
+      </div>
+      </div>
+	  
+      </div>	  
+	 </section>
+<br>
+	 <section>
+	 <div class="row">
+	 
+	 <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/t7.jpg">
+      </div>
+      </div>
+
+	 <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/t8.jpg">
+      </div>
+      </div>
+
+	  	 <div class="col-sm-4 col-xs-12">
+      <div class="thambnail">
+      <img src="images/t9.jpg">
+      </div>
+      </div>
+
+	  
+	 </div>
+    </section>
+    
+      </div>
+    </div>
+</div>  
+
+<div class="container">
+    <div id="prince2">
+	<div class="container-fluid bg-grey">
+    <section>
+       <div class="row">
+	    <h2 style="text-align:center;">PRINCE2</h2>
+       
+	   <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/pr2.jpg">
+	   </div>
+       </div>  
+
+	   <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/pr21.jpg">
+	   </div>
+       </div>
+	   
+	   <div class="col-sm-4 col-xs-12">
+	   <div class="thambnail">
+	   <img src="images/pr22.jpg">
+	   </div>
+       </div>
+	   
+	   </div>
+       	</section>
+	</div>
+	</div>
+	</div>
+
+</body>
+</html>
